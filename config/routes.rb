@@ -1,6 +1,11 @@
 URLShortener::Application.routes.draw do
+  get "profile/index"
+
   devise_for :users
-  # root :to => "home#index"
+  
+  match '/users/password/edit', to: 'devise/passwords#edit'
+  
+  root :to => "profile#index"
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
