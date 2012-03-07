@@ -2,7 +2,8 @@ URLShortener::Application.routes.draw do
   get "profile/index"
 
   devise_for :users
-  
+  # match '/users/sign_out', to: 'devise/sessions#destroy'
+  # root :to => "profile#index"
   root :to => "profile#index"
   # The priority is based upon order of creation:
   # first created -> highest priority.
